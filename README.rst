@@ -2,6 +2,8 @@
 funkload-friendly
 =================
 
+|build-status|
+
 Friendly wrapper of Funkload.
 
 Overview
@@ -48,3 +50,6 @@ Author
 ======
 
 * Shinya Okano
+
+.. |build-status| image:: https://travis-ci.org/tokibito/funkload-friendly.svg?branch=master
+   :target: https://travis-ci.org/tokibito/funkload-friendly
