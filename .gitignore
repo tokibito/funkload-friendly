@@ -2,5 +2,6 @@ venv/
 .tox/
 .cache/
 __pycache__/
+build/
 *.py[cod]
 *.egg-info

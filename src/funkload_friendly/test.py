@@ -6,6 +6,8 @@ from funkload import FunkLoadTestCase
 
 from .cookie import CookieDict
 
+SECTION_FUNKLOAD_FRIENDLY = 'funkload-friendly'
+
 
 class TestCase(FunkLoadTestCase.FunkLoadTestCase):
     """funkload-friendly TestCase
@@ -13,14 +15,20 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
     result_directory = '.'
     log_directory = '.'
     session_id_key = 'sessionid'
+    site_url = 'http://example.com'
 
     def __init__(self, methodName='runTest', options=None):
         super(TestCase, self).__init__(methodName, options)
         self.reset_cookie()
         self.session_id_key = self.conf_get(
-            'funkload-friendly',
+            SECTION_FUNKLOAD_FRIENDLY,
             'session_id_key',
             self.__class__.session_id_key,
+            quiet=True)
+        self.site_url = self.conf_get(
+            'main',
+            'site_url',
+            self.__class__.site_url,
             quiet=True)
 
     def reset_cookie(self):
@@ -53,7 +61,10 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
         else:
             content_type = charset = None
         response.content_type_header = content_type_header
-        response.content_type = content_type.strip()
+        if content_type:
+            response.content_type = content_type.strip()
+        else:
+            response.content_type = None
         response.charset = charset
         # If response.body is json, then set data attribute.
         if response.content_type == 'application/json':
