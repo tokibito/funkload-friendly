@@ -27,7 +27,7 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
             quiet=True)
         self.site_url = self.conf_get(
             'main',
-            'site_url',
+            'url',
             self.__class__.site_url,
             quiet=True)
 
