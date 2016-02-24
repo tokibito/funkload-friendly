@@ -3,5 +3,6 @@ venv/
 .cache/
 __pycache__/
 build/
+dist/
 *.py[cod]
 *.egg-info
