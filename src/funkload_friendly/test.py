@@ -94,6 +94,11 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
                 return method.description.encode('utf-8')
         # log file and result file directory
         if section in ['ftest', 'bench']:
+            if section == 'ftest':
+                # TODO: use module name
+                test_name = self.test_name
+            else:  # bench
+                test_name = self.test_name
             if key == 'result_path':
                 result_directory = super(TestCase, self).conf_get(
                     section, 'result_directory',
