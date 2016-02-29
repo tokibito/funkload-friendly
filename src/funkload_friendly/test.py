@@ -95,8 +95,8 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
         # log file and result file directory
         if section in ['ftest', 'bench']:
             if section == 'ftest':
-                # TODO: use module name
-                test_name = self.test_name
+                # use class name
+                test_name = self.__class__.__name__.lower()
             else:  # bench
                 test_name = self.test_name
             if key == 'result_path':
@@ -105,7 +105,7 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
                     default=self.result_directory, quiet=quiet)
                 result_path = os.path.join(
                     result_directory,
-                    '{}.xml'.format(self.test_name))
+                    '{}.xml'.format(test_name))
                 return result_path
             elif key == 'log_path':
                 log_directory = super(TestCase, self).conf_get(
@@ -113,7 +113,7 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
                     quiet=quiet)
                 log_to = os.path.join(
                     log_directory,
-                    '{}.log'.format(self.test_name))
+                    '{}.log'.format(test_name))
                 return log_to
         return super(TestCase, self).conf_get(
             section, key, default=default, quiet=quiet)
