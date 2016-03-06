@@ -46,6 +46,13 @@ License
 
 This software is licensed under the MIT License.
 
+Documentaion
+============
+
+The latest documentation is hosted at Read The Docs.
+
+https://funkload-friendly.readthedocs.org/en/latest/
+
 Develop
 =======
 
