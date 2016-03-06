@@ -2,7 +2,7 @@
 funkload-friendly
 =================
 
-|build-status|
+|build-status| |pypi| |docs|
 
 Friendly wrapper of Funkload.
 
@@ -36,6 +36,11 @@ Getting Started
    This package uses the easy_install to install.
    Because it can not "pip install funkload".
 
+Cookiecutter
+============
+
+There are Cookiecutter template for this projec: https://github.com/tokibito/cookiecutter-funkload-friendly
+
 License
 =======
 
@@ -53,3 +58,7 @@ Author
 
 .. |build-status| image:: https://travis-ci.org/tokibito/funkload-friendly.svg?branch=master
    :target: https://travis-ci.org/tokibito/funkload-friendly
+.. |docs| image:: https://readthedocs.org/projects/funkload-friendly/badge/?version=latest
+   :target: https://readthedocs.org/projects/funkload-friendly/
+.. |pypi| image:: https://badge.fury.io/py/funkload-friendly.svg
+   :target: http://badge.fury.io/py/funkload-friendly
