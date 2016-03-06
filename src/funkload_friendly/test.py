@@ -52,11 +52,15 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
         # Content-type header
         # e.g. Content-Type: application/json; charset=utf-8
         content_type_header = response.headers.get('content-type')
-        if ';' in content_type_header:
-            content_type, charset_pair = content_type_header.split(';', 1)
-            if '=' in charset_pair:
-                _key, charset = charset_pair.split('=', 1)
+        if content_type_header:
+            if ';' in content_type_header:
+                content_type, charset_pair = content_type_header.split(';', 1)
+                if '=' in charset_pair:
+                    _key, charset = charset_pair.split('=', 1)
+                else:
+                    charset = None
             else:
+                content_type = content_type_header
                 charset = None
         else:
             content_type = charset = None
