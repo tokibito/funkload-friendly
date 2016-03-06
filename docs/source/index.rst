@@ -20,6 +20,6 @@ Indices and tables
 .. |build-status| image:: https://travis-ci.org/tokibito/funkload-friendly.svg?branch=master
    :target: https://travis-ci.org/tokibito/funkload-friendly
 .. |docs| image:: https://readthedocs.org/projects/funkload-friendly/badge/?version=latest
-   :target: https://readthedocs.org/projects/funkload-friendly/
+   :target: http://funkload-friendly.readthedocs.org/en/latest/?badge=latest
 .. |pypi| image:: https://badge.fury.io/py/funkload-friendly.svg
    :target: http://badge.fury.io/py/funkload-friendly
