@@ -7,6 +7,7 @@ class JSONData(Data):
     """Support JSON
     """
     def __init__(self, data, content_type='application/json'):
-        super(JSONData, self).__init__(
+        Data.__init__(
+            self,
             content_type,
             json.dumps(data))
