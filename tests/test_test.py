@@ -26,3 +26,24 @@ class TestCaseTest(TestCase):
         self.assertEqual(
             testcase.cookie[testcase.session_id_key],
             'test_id')
+
+
+class DescriptionTest(TestCase):
+    def getTarget(self):
+        from funkload_friendly.test import description as target
+        return target
+
+    def test_decorate_method(self):
+        """decorate instance method
+        """
+        description = self.getTarget()
+
+        class Target(object):
+            @description("spam description")
+            def described_method(self):
+                pass
+
+        target = Target()
+        self.assertEqual(
+            target.described_method.description,
+            "spam description")

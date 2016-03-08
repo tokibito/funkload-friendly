@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 COOKIE_ATTRIBUTE_NAMES = [
     'expires',
     'max-age',
@@ -10,7 +12,7 @@ COOKIE_ATTRIBUTE_NAMES = [
 ]
 
 
-class CookieDict(dict):
+class CookieDict(OrderedDict):
     def __init__(self, *args, **kwargs):
         super(CookieDict, self).__init__(*args, **kwargs)
 
@@ -30,5 +32,6 @@ class CookieDict(dict):
                 key, value = key_value.split('=', 1)
             else:
                 key = key_value
-            if key.strip().lower() not in COOKIE_ATTRIBUTE_NAMES:
-                self[key.strip()] = value.strip()
+            strip_key = key.strip()
+            if strip_key and strip_key.lower() not in COOKIE_ATTRIBUTE_NAMES:
+                self[strip_key] = value.strip()
