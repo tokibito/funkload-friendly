@@ -10,6 +10,13 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   overview
+   usage
+   config_support
+   cookie_support
+   json_support
+   changelog
+
 Indices and tables
 ==================
 

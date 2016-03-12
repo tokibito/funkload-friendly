@@ -39,7 +39,12 @@ Getting Started
 Cookiecutter
 ============
 
-There are Cookiecutter template for this projec: https://github.com/tokibito/cookiecutter-funkload-friendly
+There are Cookiecutter template for this project: https://github.com/tokibito/cookiecutter-funkload-friendly
+
+Examples
+========
+
+There are some examples: https://github.com/tokibito/funkload-friendly-example
 
 License
 =======
