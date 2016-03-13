@@ -4,6 +4,14 @@ JSON data support
 
 ``funkload_friendly.datatypes.JSONData`` class extends ``funkload.utils.Data``. And support JSON parameter in HTTP POST.
 
+**Example**:
+
+.. code-block:: pycon
+
+   >>> from funkload_friendly.datatypes import JSONData
+   >>> JSONData({'spam': 'egg', 'ham': 'bacon'})
+   [User data application/json]
+
 .. code-block:: python
 
    from funkload_friendly.test import TestCase, description
