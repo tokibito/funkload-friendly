@@ -12,8 +12,7 @@ Contents:
 
    overview
    usage
-   config_support
-   cookie_support
+   testcase_class
    json_support
    changelog
 
