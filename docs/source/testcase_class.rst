@@ -37,6 +37,17 @@ This means it easy to be able to test using the Cookie-based session.
 Configration support
 ====================
 
+Omit filename
+-------------
+
+In FunkLoad, output destination of log and result is, you must specify the file name.
+
+In funkload-friendly, specify a directory name, you can omit the file name.
+
+Shortcut attribute
+------------------
+
+- ``[main]-[url]`` to ``self.site_url``.
 
 Description decorator
 =====================
