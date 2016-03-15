@@ -18,6 +18,8 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
     site_url = 'http://example.com'
 
     def __init__(self, methodName='runTest', options=None):
+        """Constructor
+        """
         super(TestCase, self).__init__(methodName, options)
         self.reset_cookie()
         self.session_id_key = self.conf_get(
@@ -32,6 +34,8 @@ class TestCase(FunkLoadTestCase.FunkLoadTestCase):
             quiet=True)
 
     def reset_cookie(self):
+        """Reset cookie data.
+        """
         self.cookie = CookieDict()
 
     def _connect(self, url, params, ok_codes, rtype, description,

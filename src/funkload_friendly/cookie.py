@@ -1,3 +1,5 @@
+"""This module is processing Cookie Data.
+"""
 from collections import OrderedDict
 
 COOKIE_ATTRIBUTE_NAMES = [
@@ -13,7 +15,15 @@ COOKIE_ATTRIBUTE_NAMES = [
 
 
 class CookieDict(OrderedDict):
+    """Represent Cookie Data
+
+    CookieDict class extends OrderedDict.
+    """
     def __init__(self, *args, **kwargs):
+        """Constructor
+
+        The argument is same the OrderedDict.
+        """
         super(CookieDict, self).__init__(*args, **kwargs)
 
     def render_to_string(self):
