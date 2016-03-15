@@ -3,7 +3,7 @@ funkload-friendly
 
 |build-status| |pypi| |docs|
 
-Friendly wrapper of Funkload.
+Friendly wrapper of FunkLoad.
 
 Contents:
 

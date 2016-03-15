@@ -4,14 +4,14 @@ funkload-friendly
 
 |build-status| |pypi| |docs|
 
-Friendly wrapper of Funkload.
+Friendly wrapper of FunkLoad.
 
 Overview
 ========
 
-funkload-friendly is a wrapper of `Funkload <http://funkload.nuxeo.org/>`_.
+funkload-friendly is a wrapper of `FunkLoad <http://funkload.nuxeo.org/>`_.
 
-The funkload is good tool for load testing of Web Application.
+The FunkLoad is good tool for load testing of Web Application.
 But some rules are not friendly to user.
 
 funkload-friendly resolve some frustration.
