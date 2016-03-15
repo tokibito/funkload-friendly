@@ -1,5 +1,5 @@
 =======================
-friendly TestCase class
+Friendly TestCase Class
 =======================
 
 funkload-friendly provides a TestCase, it is extended FunkLoadTestCase.
@@ -10,7 +10,7 @@ This class features:
 - Be able to configure log and result output directory, and some shortcut attribute.
 - decorator for test description
 
-Cookie support
+Cookie Support
 ==============
 
 In FunkLoad, cookie data doesn't retain between request.
@@ -34,22 +34,49 @@ This means it easy to be able to test using the Cookie-based session.
                ]
            )
 
-Configration support
+Configration Support
 ====================
 
-Omit filename
+funkload-friendly can be a configuration shown below.
+
+Omit Filename
 -------------
 
 In FunkLoad, output destination of log and result is, you must specify the file name.
 
 In funkload-friendly, specify a directory name, you can omit the file name.
 
-Shortcut attribute
+**Example**:
+
+.. code-block:: ini
+
+   [ftest]
+   log_to = console file
+   log_directory = ftest/
+   result_directory = ftest/
+
+   [bench]
+   log_to = console file
+   log_directory = bench/
+   result_directory = bench/
+
+Shortcut Attribute
 ------------------
 
-- ``[main]-[url]`` to ``self.site_url``.
+Some config value assign to the attribute of TestCase.
 
-Description decorator
+- section: ``[main]``, key: ``url`` map to ``TestCase.site_url``.
+
+  Specify the ``url`` in ``http[s]://host[:port]`` format.
+
+**Example**:
+
+.. code-block:: ini
+
+   [main]
+   url = http://localhost:8000
+
+Description Decorator
 =====================
 
 In FunkLoad, method description has must be described in config file.
