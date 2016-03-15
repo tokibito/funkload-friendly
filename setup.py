@@ -16,7 +16,7 @@ def read(filename):
 setup(
     name='funkload-friendly',
     version='0.2',
-    description="Friendly wrapper of Funkload.",
+    description="Friendly wrapper of FunkLoad.",
     long_description=read('README.rst'),
     package_dir={'': 'src'},
     packages=find_packages('src'),
