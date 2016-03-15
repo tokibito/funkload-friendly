@@ -14,6 +14,7 @@ Contents:
    usage
    testcase_class
    json_support
+   reference/index
    changelog
 
 Indices and tables
